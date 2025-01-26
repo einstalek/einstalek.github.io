@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blender on Underground Notes</title>
-    <link>http://localhost:1313/tags/blender/</link>
+    <link>https://einstalek.github.io/tags/blender/</link>
     <description>Recent content in Blender on Underground Notes</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/blender/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://einstalek.github.io/tags/blender/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Eliminating Seams: Joining Separate Meshes with Blender</title>
-      <link>http://localhost:1313/posts/neck-seam/</link>
+      <link>https://einstalek.github.io/posts/neck-seam/</link>
       <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/neck-seam/</guid>
+      <guid>https://einstalek.github.io/posts/neck-seam/</guid>
       <description>I recently encountered a problem working with 3D avatars: having a custom-generated head mesh, I needed to merge it seamlessly with the avatar&amp;rsquo;s body. And since you can&amp;rsquo;t go around asking 3D artists to do their magic all the time, here I suggest a simple solution for this type of problem.
 Figure 1: Separate head and body meshes
 To tackle this, one can make use of Blender&amp;rsquo;s proportional editing, and as it turns out, it works pretty well.</description>

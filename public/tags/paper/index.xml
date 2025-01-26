@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Paper on Underground Notes</title>
-    <link>http://localhost:1313/tags/paper/</link>
+    <link>https://einstalek.github.io/tags/paper/</link>
     <description>Recent content in Paper on Underground Notes</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/paper/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://einstalek.github.io/tags/paper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Face Embedding Conditioned Transformer For 3D Face Reconstruction</title>
-      <link>http://localhost:1313/posts/shape-former/shape-former/</link>
+      <link>https://einstalek.github.io/posts/shape-former/shape-former/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/shape-former/shape-former/</guid>
+      <guid>https://einstalek.github.io/posts/shape-former/shape-former/</guid>
       <description>Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome Disney paper. Using paper&amp;rsquo;s transformer decoder architecture, with cross-covariance attention (XCiT) conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using HRN which scores among the highest on 3D Face Reconstruction benchmark.</description>
     </item>
     <item>
       <title>Text-Guided 3D Face Synthesis: Paper Break-Down</title>
-      <link>http://localhost:1313/posts/sds-faceg2e/</link>
+      <link>https://einstalek.github.io/posts/sds-faceg2e/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sds-faceg2e/</guid>
+      <guid>https://einstalek.github.io/posts/sds-faceg2e/</guid>
       <description>In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.
 Figure 1: Image from the paper: faceg2e pipeline
 Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation.</description>
     </item>
     <item>
       <title>AUV-Net: Paper Break-down, Part 1</title>
-      <link>http://localhost:1313/posts/auvnet-2d/auvnet-2d/</link>
+      <link>https://einstalek.github.io/posts/auvnet-2d/auvnet-2d/</link>
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/auvnet-2d/auvnet-2d/</guid>
+      <guid>https://einstalek.github.io/posts/auvnet-2d/auvnet-2d/</guid>
       <description>Aligning mesh textures with different topologies could be a fantastic feature for any 3D project. This would unlock numerous possibilities, such as texture transfer or novel texture generation. That’s precisely what the AUV-Net paper by Nvidia addresses. Let’s review the paper to understand its primary concepts, implement it from scratch, and see if we can achieve results similar to those in the paper.
 Figure 1: Texture transfer with AUV-Net, image from the paper</description>
     </item>

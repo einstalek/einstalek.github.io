@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Texture on Underground Notes</title>
-    <link>http://localhost:1313/tags/texture/</link>
+    <link>https://einstalek.github.io/tags/texture/</link>
     <description>Recent content in Texture on Underground Notes</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/texture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://einstalek.github.io/tags/texture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Text-Guided 3D Face Synthesis: Paper Break-Down</title>
-      <link>http://localhost:1313/posts/sds-faceg2e/</link>
+      <link>https://einstalek.github.io/posts/sds-faceg2e/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sds-faceg2e/</guid>
+      <guid>https://einstalek.github.io/posts/sds-faceg2e/</guid>
       <description>In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.
 Figure 1: Image from the paper: faceg2e pipeline
 Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation.</description>
     </item>
     <item>
       <title>Using Stable Diffusion To Tune 3D Morphable Model</title>
-      <link>http://localhost:1313/posts/sds-head-shape/</link>
+      <link>https://einstalek.github.io/posts/sds-head-shape/</link>
       <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/sds-head-shape/</guid>
+      <guid>https://einstalek.github.io/posts/sds-head-shape/</guid>
       <description>Morphable models One of the easiest and common approaches to face shape reconstruction are 3D morphable models (3DMM). For example, the FLAME head model is used left and right in research papers. Among recent works making use of 3DMM that I&amp;rsquo;ve seen, HRN demonstrates quite impressive results.
 I&amp;rsquo;m not going to discuss in depth 3DMMs, how they work or how they&amp;rsquo;re built. Let&amp;rsquo;s just mention that with this approach, a 3D shape is reconstructed as a linear combination of basis components.</description>
     </item>

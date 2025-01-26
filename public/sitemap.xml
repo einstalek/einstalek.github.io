@@ -2,88 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/3d/</loc>
+    <loc>https://einstalek.github.io/tags/3d/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/attention/</loc>
+    <loc>https://einstalek.github.io/tags/attention/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/face-embedding/</loc>
+    <loc>https://einstalek.github.io/tags/face-embedding/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/shape-former/shape-former/</loc>
+    <loc>https://einstalek.github.io/posts/shape-former/shape-former/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/morphable-model/</loc>
+    <loc>https://einstalek.github.io/tags/morphable-model/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/paper/</loc>
+    <loc>https://einstalek.github.io/tags/paper/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://einstalek.github.io/posts/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://einstalek.github.io/tags/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/transformer/</loc>
+    <loc>https://einstalek.github.io/tags/transformer/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://einstalek.github.io/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blender/</loc>
+    <loc>https://einstalek.github.io/tags/blender/</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/neck-seam/</loc>
+    <loc>https://einstalek.github.io/posts/neck-seam/</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/geometry/</loc>
+    <loc>https://einstalek.github.io/tags/geometry/</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/controlnet/</loc>
+    <loc>https://einstalek.github.io/tags/controlnet/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/diffusion/</loc>
+    <loc>https://einstalek.github.io/tags/diffusion/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/latent/</loc>
+    <loc>https://einstalek.github.io/tags/latent/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sds/</loc>
+    <loc>https://einstalek.github.io/tags/sds/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sds-faceg2e/</loc>
+    <loc>https://einstalek.github.io/posts/sds-faceg2e/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/texture/</loc>
+    <loc>https://einstalek.github.io/tags/texture/</loc>
     <lastmod>2024-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sds-head-shape/</loc>
+    <loc>https://einstalek.github.io/posts/sds-head-shape/</loc>
     <lastmod>2024-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/classifier/</loc>
+    <loc>https://einstalek.github.io/tags/classifier/</loc>
     <lastmod>2023-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gan/</loc>
+    <loc>https://einstalek.github.io/tags/gan/</loc>
     <lastmod>2023-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/</loc>
+    <loc>https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/</loc>
     <lastmod>2023-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/alignment/</loc>
+    <loc>https://einstalek.github.io/tags/alignment/</loc>
     <lastmod>2023-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/auvnet-2d/auvnet-2d/</loc>
+    <loc>https://einstalek.github.io/posts/auvnet-2d/auvnet-2d/</loc>
     <lastmod>2023-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pca/</loc>
+    <loc>https://einstalek.github.io/tags/pca/</loc>
     <lastmod>2023-05-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://einstalek.github.io/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/cv/</loc>
+    <loc>https://einstalek.github.io/cv/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://einstalek.github.io/categories/</loc>
   </url>
 </urlset>

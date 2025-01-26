@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Eliminating Seams: Joining Separate Meshes with Blender | Underground Notes</title>
 <meta name="keywords" content="blender, 3d, geometry">
 <meta name="description" content="I recently encountered a problem working with 3D avatars: having a custom-generated head mesh, I needed to merge it seamlessly with the avatar&rsquo;s body. And since you can&rsquo;t go around asking 3D artists to do their magic all the time, here I suggest a simple solution for this type of problem.
 Figure 1: Separate head and body meshes
 To tackle this, one can make use of Blender&rsquo;s proportional editing, and as it turns out, it works pretty well.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/neck-seam/">
+<link rel="canonical" href="https://einstalek.github.io/posts/neck-seam/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b61fcfd045e796a8b2d82921640c6460592faab5e5c2c76d0ba1c0018405cbfa.css" integrity="sha256-th/P0EXnlqiy2CkhZAxkYFkvqrXlwsdtC6HAAYQFy/o=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://einstalek.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://einstalek.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://einstalek.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://einstalek.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://einstalek.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/neck-seam/">
+<link rel="alternate" hreflang="en" href="https://einstalek.github.io/posts/neck-seam/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,6 +58,73 @@ To tackle this, one can make use of Blender&rsquo;s proportional editing, and as
 
     </style>
 </noscript>
+  
+
+<meta property="og:title" content="Eliminating Seams: Joining Separate Meshes with Blender" />
+<meta property="og:description" content="I recently encountered a problem working with 3D avatars: having a custom-generated head mesh, I needed to merge it seamlessly with the avatar&rsquo;s body. And since you can&rsquo;t go around asking 3D artists to do their magic all the time, here I suggest a simple solution for this type of problem.
+Figure 1: Separate head and body meshes
+To tackle this, one can make use of Blender&rsquo;s proportional editing, and as it turns out, it works pretty well." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://einstalek.github.io/posts/neck-seam/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-08-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-08-10T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Eliminating Seams: Joining Separate Meshes with Blender"/>
+<meta name="twitter:description" content="I recently encountered a problem working with 3D avatars: having a custom-generated head mesh, I needed to merge it seamlessly with the avatar&rsquo;s body. And since you can&rsquo;t go around asking 3D artists to do their magic all the time, here I suggest a simple solution for this type of problem.
+Figure 1: Separate head and body meshes
+To tackle this, one can make use of Blender&rsquo;s proportional editing, and as it turns out, it works pretty well."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://einstalek.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Eliminating Seams: Joining Separate Meshes with Blender",
+      "item": "https://einstalek.github.io/posts/neck-seam/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Eliminating Seams: Joining Separate Meshes with Blender",
+  "name": "Eliminating Seams: Joining Separate Meshes with Blender",
+  "description": "I recently encountered a problem working with 3D avatars: having a custom-generated head mesh, I needed to merge it seamlessly with the avatar\u0026rsquo;s body. And since you can\u0026rsquo;t go around asking 3D artists to do their magic all the time, here I suggest a simple solution for this type of problem.\nFigure 1: Separate head and body meshes\nTo tackle this, one can make use of Blender\u0026rsquo;s proportional editing, and as it turns out, it works pretty well.",
+  "keywords": [
+    "blender", "3d", "geometry"
+  ],
+  "articleBody": "I recently encountered a problem working with 3D avatars: having a custom-generated head mesh, I needed to merge it seamlessly with the avatar’s body. And since you can’t go around asking 3D artists to do their magic all the time, here I suggest a simple solution for this type of problem.\nFigure 1: Separate head and body meshes\nTo tackle this, one can make use of Blender’s proportional editing, and as it turns out, it works pretty well.\nFinding Neck-Seam Vertex Correspondences First, I needed to establish a vertex-to-vertex correspondence between the head and body neck seam vertices. This was fairly straightforward since I had an example of a head mesh that fit precisely onto the body. By measuring pairwise distances between head and body vertices, I found the desired correspondences.\n# vertex indices of the neck seam on the body body_seam_indices = [...] # vertex indices of the neck seam on the head that fits the body head_seam_indices = [...] # get body seam vertex coordinates body_verts = [bpy.data.objects[body].data.vertices[i].co for \\ i in body_seam_indices] body_verts = np.array(body_verts) # and head seam vertex coordinates head_verts = [bpy.context.scene.objects[src_head_key].data.vertices[i].co for \\ i in head_seam_indices] head_verts = np.array(head_verts) # find vertex-to-vertex correspondances by comparing distances head_indices = np.arange(len(head_seam_indices)) body_indices = np.argmin(scipy.spatial.distance.cdist(head_verts, body_verts), axis=1) Proportional editing Using proportional editing, I can pull a vertex in a specific direction while influencing a certain zone around that vertex as well. The radius of this zone of influence is a hyperparameter in this approach. Let’s see what happens if I go through the neck-seam vertex correspondences that I found and pull each head seam vertex towards its corresponding vertex from the neck seam.\nbody_seam_indices = np.array(body_seam_indices)[body_indices] head_seam_indices = np.array(head_seam_indices)[head_indices] # go through each seam vertex-pair for i, (head_vertex_index, body_vertex_index) in enumerate( zip(head_seam_indices, body_seam_indices)): # get target coordinate from the body vertex target_coord = bpy.data.objects[body].data.vertices[body_vertex_index].co # enter edit mode on the head that we will be editing obj = bpy.data.objects[head] bpy.ops.object.mode_set(mode='EDIT') # find initial head vertex coordinate and select that vertex bm = bmesh.from_edit_mesh(bpy.context.edit_object.data) vertex = [v for v in bm.verts if v.index == head_vertex_index][0] vertex.select = True init_coord = vertex.co # pull the head vertex with proportional editing translation = coord - init_coord bpy.ops.transform.translate(value=1*translation, proportional_size=0.1, # hyperparameter constraint_axis=(False, False, False), mirror=False, use_proportional_edit=True, proportional_edit_falloff='SMOOTH' ) By the time we pull on the last vertex, the first one will have already shifted a bit from the target position. But repeating this a few times will reach a certain convergence pretty fast.\nFigure 2: Neck seam after 1, 2, 5 and 10 passes proposed editing\nAfter ~10 passes the gap between two meshes is so small, that I can now just set head seam vertex corrdinates to the same ones as their corresponding body vertices.\nFigure 3: Hard-setting seam vertices to target positions after 10 passes of proportional editing\nConclusion Described here is a very simple yet effective approach to joining two separate meshes with different seams. In my case, the vertex count of both seams was the same, but this solution can be extended to other cases as well.\n",
+  "wordCount" : "510",
+  "inLanguage": "en",
+  "datePublished": "2024-08-10T00:00:00Z",
+  "dateModified": "2024-08-10T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://einstalek.github.io/posts/neck-seam/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Underground Notes",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://einstalek.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -75,7 +142,7 @@ To tackle this, one can make use of Blender&rsquo;s proportional editing, and as
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Underground Notes (Alt + H)">Underground Notes</a>
+            <a href="https://einstalek.github.io/" accesskey="h" title="Underground Notes (Alt + H)">Underground Notes</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -101,12 +168,12 @@ To tackle this, one can make use of Blender&rsquo;s proportional editing, and as
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/cv/" title="CV">
+                <a href="https://einstalek.github.io/cv/" title="CV">
                     <span>CV</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://einstalek.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -226,16 +293,16 @@ To tackle this, one can make use of Blender&rsquo;s proportional editing, and as
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/blender/">Blender</a></li>
-      <li><a href="http://localhost:1313/tags/3d/">3D</a></li>
-      <li><a href="http://localhost:1313/tags/geometry/">Geometry</a></li>
+      <li><a href="https://einstalek.github.io/tags/blender/">Blender</a></li>
+      <li><a href="https://einstalek.github.io/tags/3d/">3D</a></li>
+      <li><a href="https://einstalek.github.io/tags/geometry/">Geometry</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Underground Notes</a></span> · 
+        <span>&copy; 2025 <a href="https://einstalek.github.io/">Underground Notes</a></span> · 
 
     <span>
         Powered by

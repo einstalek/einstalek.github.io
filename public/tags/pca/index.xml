@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Pca on Underground Notes</title>
-    <link>http://localhost:1313/tags/pca/</link>
+    <link>https://einstalek.github.io/tags/pca/</link>
     <description>Recent content in Pca on Underground Notes</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/pca/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://einstalek.github.io/tags/pca/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AUV-Net: Paper Break-down, Part 1</title>
-      <link>http://localhost:1313/posts/auvnet-2d/auvnet-2d/</link>
+      <link>https://einstalek.github.io/posts/auvnet-2d/auvnet-2d/</link>
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/auvnet-2d/auvnet-2d/</guid>
+      <guid>https://einstalek.github.io/posts/auvnet-2d/auvnet-2d/</guid>
       <description>Aligning mesh textures with different topologies could be a fantastic feature for any 3D project. This would unlock numerous possibilities, such as texture transfer or novel texture generation. That’s precisely what the AUV-Net paper by Nvidia addresses. Let’s review the paper to understand its primary concepts, implement it from scratch, and see if we can achieve results similar to those in the paper.
 Figure 1: Texture transfer with AUV-Net, image from the paper</description>
     </item>
