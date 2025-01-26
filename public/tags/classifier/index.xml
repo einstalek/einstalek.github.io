@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Classifier on Underground Notes</title>
-    <link>https://einstalek.github.io/tags/classifier/</link>
+    <link>http://localhost:1313/tags/classifier/</link>
     <description>Recent content in Classifier on Underground Notes</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://einstalek.github.io/tags/classifier/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/classifier/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How To Visually Evaluate Image Classifier Using StyleGAN2</title>
-      <link>https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/</link>
+      <link>http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/</guid>
+      <guid>http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/</guid>
       <description>In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.
 StyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this repo, alongside generated examples across various domains.
 Figure 1: Examples generated with StyleGAN2

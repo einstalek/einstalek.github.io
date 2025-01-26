@@ -3,7 +3,7 @@ title: "Using Stable Diffusion To Tune 3D Morphable Model"
 date: "2024-01-04"
 ShowToc: true
 TocOpen: false
-tags: ["sds", "latent", "diffusion", "controlnet", "3d", "geometry", "texture"]
+tags: ["sds", "latent", "diffusion", "controlnet", "3d", "geometry", "texture", "morphable model"]
 ---
 
 

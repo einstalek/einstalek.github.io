@@ -2,101 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Underground Notes</title>
-    <link>https://einstalek.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Underground Notes</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://einstalek.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>3d</title>
-      <link>https://einstalek.github.io/tags/3d/</link>
-      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/3d/</guid>
+      <title>3D</title>
+      <link>http://localhost:1313/tags/3d/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/3d/</guid>
       <description></description>
     </item>
     <item>
-      <title>Blender</title>
-      <link>https://einstalek.github.io/tags/blender/</link>
-      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/blender/</guid>
+      <title>Attention</title>
+      <link>http://localhost:1313/tags/attention/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/attention/</guid>
       <description></description>
     </item>
     <item>
-      <title>Geometry</title>
-      <link>https://einstalek.github.io/tags/geometry/</link>
-      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/geometry/</guid>
+      <title>Face Embedding</title>
+      <link>http://localhost:1313/tags/face-embedding/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/face-embedding/</guid>
       <description></description>
     </item>
     <item>
-      <title>Controlnet</title>
-      <link>https://einstalek.github.io/tags/controlnet/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/controlnet/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Diffusion</title>
-      <link>https://einstalek.github.io/tags/diffusion/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/diffusion/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Latent</title>
-      <link>https://einstalek.github.io/tags/latent/</link>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/latent/</guid>
+      <title>Morphable Model</title>
+      <link>http://localhost:1313/tags/morphable-model/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/morphable-model/</guid>
       <description></description>
     </item>
     <item>
       <title>Paper</title>
-      <link>https://einstalek.github.io/tags/paper/</link>
+      <link>http://localhost:1313/tags/paper/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/paper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transformer</title>
+      <link>http://localhost:1313/tags/transformer/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/transformer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blender</title>
+      <link>http://localhost:1313/tags/blender/</link>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/blender/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Geometry</title>
+      <link>http://localhost:1313/tags/geometry/</link>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/geometry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Controlnet</title>
+      <link>http://localhost:1313/tags/controlnet/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/paper/</guid>
+      <guid>http://localhost:1313/tags/controlnet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Diffusion</title>
+      <link>http://localhost:1313/tags/diffusion/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/diffusion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latent</title>
+      <link>http://localhost:1313/tags/latent/</link>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/latent/</guid>
       <description></description>
     </item>
     <item>
       <title>Sds</title>
-      <link>https://einstalek.github.io/tags/sds/</link>
+      <link>http://localhost:1313/tags/sds/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/sds/</guid>
+      <guid>http://localhost:1313/tags/sds/</guid>
       <description></description>
     </item>
     <item>
       <title>Texture</title>
-      <link>https://einstalek.github.io/tags/texture/</link>
+      <link>http://localhost:1313/tags/texture/</link>
       <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/texture/</guid>
+      <guid>http://localhost:1313/tags/texture/</guid>
       <description></description>
     </item>
     <item>
       <title>Classifier</title>
-      <link>https://einstalek.github.io/tags/classifier/</link>
+      <link>http://localhost:1313/tags/classifier/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/classifier/</guid>
+      <guid>http://localhost:1313/tags/classifier/</guid>
       <description></description>
     </item>
     <item>
       <title>Gan</title>
-      <link>https://einstalek.github.io/tags/gan/</link>
+      <link>http://localhost:1313/tags/gan/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/gan/</guid>
+      <guid>http://localhost:1313/tags/gan/</guid>
       <description></description>
     </item>
     <item>
       <title>Alignment</title>
-      <link>https://einstalek.github.io/tags/alignment/</link>
+      <link>http://localhost:1313/tags/alignment/</link>
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/alignment/</guid>
+      <guid>http://localhost:1313/tags/alignment/</guid>
       <description></description>
     </item>
     <item>
       <title>Pca</title>
-      <link>https://einstalek.github.io/tags/pca/</link>
+      <link>http://localhost:1313/tags/pca/</link>
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://einstalek.github.io/tags/pca/</guid>
+      <guid>http://localhost:1313/tags/pca/</guid>
       <description></description>
     </item>
   </channel>

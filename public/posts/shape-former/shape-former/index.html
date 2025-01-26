@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Face Embedding Conditioned Transformer For 3D Face Reconstruction | Underground Notes</title>
+<meta name="keywords" content="transformer, 3D, paper, attention, face embedding, morphable model">
+<meta name="description" content="Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome Disney paper. Using paper&rsquo;s transformer decoder architecture, with cross-covariance attention (XCiT) conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using HRN which scores among the highest on 3D Face Reconstruction benchmark.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/shape-former/shape-former/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b61fcfd045e796a8b2d82921640c6460592faab5e5c2c76d0ba1c0018405cbfa.css" integrity="sha256-th/P0EXnlqiy2CkhZAxkYFkvqrXlwsdtC6HAAYQFy/o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/shape-former/shape-former/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Underground Notes (Alt + H)">Underground Notes</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Face Embedding Conditioned Transformer For 3D Face Reconstruction
+    </h1>
+    <div class="post-meta"><span title='2025-01-26 00:00:00 +0000 UTC'>January 26, 2025</span>&nbsp;·&nbsp;4 min
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#shape-transformers-and-xcit-blocks" aria-label="Shape Transformers and XCiT Blocks">Shape Transformers and XCiT Blocks</a></li>
+                <li>
+                    <a href="#a-hierarchical-representation-network-hrn" aria-label="A Hierarchical Representation Network (HRN)">A Hierarchical Representation Network (HRN)</a></li>
+                <li>
+                    <a href="#face-embeddings-coming-into-play" aria-label="Face embeddings coming into play">Face embeddings coming into play</a></li>
+                <li>
+                    <a href="#results" aria-label="Results">Results</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome <a href="https://assets.studios.disneyresearch.com/app/uploads/2022/03/Shape-Transformers.pdf">Disney paper</a>. Using paper&rsquo;s transformer decoder architecture, with cross-covariance attention <a href="https://github.com/facebookresearch/xcit?tab=readme-ov-file">(XCiT)</a> conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using <a href="https://github.com/youngLBW/HRN">HRN</a> which scores among the highest on 3D Face Reconstruction <a href="https://paperswithcode.com/sota/3d-face-reconstruction-on-realy">benchmark</a>.</p>
+<h3 id="shape-transformers-and-xcit-blocks">Shape Transformers and XCiT Blocks<a hidden class="anchor" aria-hidden="true" href="#shape-transformers-and-xcit-blocks">#</a></h3>
+<p>In their paper, Disney Research proposed a new approach to modeling 3D shapes using a transformer-based architecture. At the core of their work is the Shape Transformer, which includes:</p>
+<ul>
+<li>A transformer-based model that is topology-independent, since the encoder’s input consists of learned tokens for each point sampled from the mesh surface.</li>
+<li>Cross-Covariance Attention (XCiT) blocks are used for learning non-linear spatial correlations.</li>
+</ul>
+<p>XCiT blocks differ from traditional self-attention mechanisms by operating on the cross-covariance of token features, reducing computational overhead. This makes them ideal for 3D tasks, where input resolution can become a bottleneck. In this particular case, ~5k points are sampled from the mesh surface, and each one is translated into a token of dimension 512 (same as the face embedding) — so using vanilla self-attention mechanisms would be sort of infeasible.</p>
+<figure class="custom-caption">
+    <img loading="lazy" src="/posts/shape-former/architecture.png"
+         alt="Figure 1: Shape Transformers pipeline"/> <figcaption>
+            <p>Figure 1: Shape Transformers pipeline</p>
+        </figcaption>
+</figure>
+
+<p>In Shape Transformer, the encoder model gets two 3D inputs: one, points sampled from a canonical shape (averaged head, for example), and the other, points from a target shape. Both inputs are encoded into latent space and passed through encoder blocks to generate the shape code.</p>
+<p>The decoder’s input consists of the shape code and points sampled from the canonical shape. The decoder’s job is to predict offsets for canonical points.</p>
+<p>Both the encoder and decoder include several consecutive XCiT blocks.</p>
+<h3 id="a-hierarchical-representation-network-hrn">A Hierarchical Representation Network (HRN)<a hidden class="anchor" aria-hidden="true" href="#a-hierarchical-representation-network-hrn">#</a></h3>
+<p>HRN is one of the top-performing methods for 3D face reconstruction. It achieves near state-of-the-art results for single-photo face reconstruction. The key idea behind HRN is to reconstruct the face shape in a coarse-to-fine manner. The first stage includes morphable model prediction (identity and expression) based on the given photo. The second stage refines low-frequency details by predicting a deformation map (per-vertex offsets). The final stage refines high-frequency details (wrinkles, etc.) by predicting a displacement map (similar to a normal map).</p>
+<figure class="custom-caption">
+    <img loading="lazy" src="/posts/shape-former/teaser.jpg"
+         alt="Figure 2: HRN pipeline"/> <figcaption>
+            <p>Figure 2: HRN pipeline</p>
+        </figcaption>
+</figure>
+
+<p>I used HRN to generate approximately ~10k diverse 3D face shapes. Unfortunately, that means face expressions are baked into the geometry, so the transformer also learns those. But, in general, if the transformer learns to approximate HRN’s output well, I get a near-SOTA solution that can be run in a single inference step (compared to HRN, whose 3 stages take approximately 9 seconds on my RTX 4090).</p>
+<h3 id="face-embeddings-coming-into-play">Face embeddings coming into play<a hidden class="anchor" aria-hidden="true" href="#face-embeddings-coming-into-play">#</a></h3>
+<p>To adapt Disney’s Shape Transformer architecture for 3D face reconstruction from a single photo, I made several modifications to their pipeline.</p>
+<ol>
+<li><em>Remove the encoder part</em></li>
+</ol>
+<p>Since I was working with face embeddings (which is much simpler than training my own face encoder), I dropped the encoder entirely. Instead, the face embedding is fed directly into the decoder to condition the reconstruction process.</p>
+<ol start="2">
+<li><em>Conditioning with Face Embeddings</em></li>
+</ol>
+<p>Inside the decoder, face embeddings are used in a couple of different ways. One, they’re used for modulation between attention blocks. And also, they serve as conditioning inputs in XCiT blocks.</p>
+<ol start="3">
+<li><em>Dynamic canonical shapes</em></li>
+</ol>
+<p>Instead of using a fixed canonical shape, I used a morphable model trained to reconstruct face shapes from Dlib face encodings.</p>
+<ol start="4">
+<li><em>Augmentations</em></li>
+</ol>
+<p>The more data, the better, so I augmented the dataset by interpolating between pairs of samples (face embedding and geometry) to create new, synthetic data points. Also, random noise was added to face embeddings during training. Both of these helped a lot with overfitting.</p>
+<figure class="custom-caption">
+    <img loading="lazy" src="/posts/shape-former/interpolation.png"
+         alt="Figure 3: Data sugmentation via linear interpolation"/> <figcaption>
+            <p>Figure 3: Data sugmentation via linear interpolation</p>
+        </figcaption>
+</figure>
+
+<ol start="5">
+<li><em>Cross Attention and Self attention</em></li>
+</ol>
+<p>Alongside vanilla XCiT blocks, I added XCiT blocks conditioned with face embeddings (in a manner similar to cross attention), to enrich latent representations with face information and to capture intra-token relationships. I noticed that due to this modification, the quality improvement is minimal, but the model converges significantly faster.</p>
+<figure class="custom-caption">
+    <img loading="lazy" src="/posts/shape-former/xcit.png"
+         alt="Figure 4: XCiT block"/> <figcaption>
+            <p>Figure 4: XCiT block</p>
+        </figcaption>
+</figure>
+
+<figure class="custom-caption">
+    <img loading="lazy" src="/posts/shape-former/xattention.png"
+         alt="Figure 5: XCiT block conditioned on face embedding"/> <figcaption>
+            <p>Figure 5: XCiT block conditioned on face embedding</p>
+        </figcaption>
+</figure>
+
+<h3 id="results">Results<a hidden class="anchor" aria-hidden="true" href="#results">#</a></h3>
+<p>Below is a comparison of the reconstruction results, with entries as follows:</p>
+<ol>
+<li>Output of the morphable model that’s used as a canonical shape generator for the transformer.</li>
+<li>Output of the transformer</li>
+<li>HRN prediction</li>
+<li>The original photo (not used during model training or testing)</li>
+</ol>
+<figure class="custom-caption">
+    <img loading="lazy" src="/posts/shape-former/comparison.png"
+         alt="Figure 6: Morphable model vs Transformer vs HRN prediction"/> <figcaption>
+            <p>Figure 6: Morphable model vs Transformer vs HRN prediction</p>
+        </figcaption>
+</figure>
+
+<p>And here’s another visualization, where I tried to show the L2 loss between face shape predictions and HRN, averaged across ~60 photos and rendered over an average head shape. Red regions represent higher reconstruction errors.</p>
+<figure class="custom-caption">
+    <img loading="lazy" src="/posts/shape-former/loss.png"
+         alt="Figure 7: Morphable model vs Transformer vs HRN prediction"/> <figcaption>
+            <p>Figure 7: Morphable model vs Transformer vs HRN prediction</p>
+        </figcaption>
+</figure>
+
+<h3 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h3>
+<p>This experiment shows how Disney’s Shape Transformer architecture could be adapted for single-photo 3D face reconstruction. In my particular case, this model is able to approximate HRN’s high-quality outputs, improving upon a simpler morphable model. The good thing is, the whole thing runs in one inference step and usually produces quite a decent result.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/transformer/">Transformer</a></li>
+      <li><a href="http://localhost:1313/tags/3d/">3D</a></li>
+      <li><a href="http://localhost:1313/tags/paper/">Paper</a></li>
+      <li><a href="http://localhost:1313/tags/attention/">Attention</a></li>
+      <li><a href="http://localhost:1313/tags/face-embedding/">Face Embedding</a></li>
+      <li><a href="http://localhost:1313/tags/morphable-model/">Morphable Model</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Underground Notes</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

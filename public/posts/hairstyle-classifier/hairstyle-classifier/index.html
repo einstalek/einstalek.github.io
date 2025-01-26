@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>How To Visually Evaluate Image Classifier Using StyleGAN2 | Underground Notes</title>
 <meta name="keywords" content="classifier, gan, latent">
 <meta name="description" content="In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.
@@ -12,16 +12,16 @@ StyleGAN2 is a generative model architecture demonstrating state-of-the-art imag
 Figure 1: Examples generated with StyleGAN2
 First, what are we going to do?">
 <meta name="author" content="">
-<link rel="canonical" href="https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/">
+<link rel="canonical" href="http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b61fcfd045e796a8b2d82921640c6460592faab5e5c2c76d0ba1c0018405cbfa.css" integrity="sha256-th/P0EXnlqiy2CkhZAxkYFkvqrXlwsdtC6HAAYQFy/o=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://einstalek.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://einstalek.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://einstalek.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://einstalek.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://einstalek.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,75 +59,6 @@ First, what are we going to do?">
 
     </style>
 </noscript>
-  
-
-<meta property="og:title" content="How To Visually Evaluate Image Classifier Using StyleGAN2" />
-<meta property="og:description" content="In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.
-StyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this repo, alongside generated examples across various domains.
-Figure 1: Examples generated with StyleGAN2
-First, what are we going to do?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-11-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-11-12T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How To Visually Evaluate Image Classifier Using StyleGAN2"/>
-<meta name="twitter:description" content="In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.
-StyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this repo, alongside generated examples across various domains.
-Figure 1: Examples generated with StyleGAN2
-First, what are we going to do?"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://einstalek.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "How To Visually Evaluate Image Classifier Using StyleGAN2",
-      "item": "https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "How To Visually Evaluate Image Classifier Using StyleGAN2",
-  "name": "How To Visually Evaluate Image Classifier Using StyleGAN2",
-  "description": "In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.\nStyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this repo, alongside generated examples across various domains.\nFigure 1: Examples generated with StyleGAN2\nFirst, what are we going to do?",
-  "keywords": [
-    "classifier", "gan", "latent"
-  ],
-  "articleBody": "In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.\nStyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this repo, alongside generated examples across various domains.\nFigure 1: Examples generated with StyleGAN2\nFirst, what are we going to do? The idea is pretty simple. Having a hairstyle classifier, we’ll search through StyleGAN2 latent space to find directions in it corresponding to each of our classes.\nIt’s not the best way to test your model if you need some good-old metrics like accuracy, F1-score, and others. But, this way, you get to see what kind of pictures actually trigger your model to predict a certain class. So, it’s going to be more visual.\nSmall intro to StyleGAN2 Let’s not go too deep into technical details, but here’s what you need to know. If you look at the StyleGAN2 architecture below, you would see that the noise input Z is first mapped to the style space W, which then is fed to the Generator.\nFigure 2: StyleGAN2 architecture\nManipulating input to StyleGAN in the W+ space may be used to generate images from a certain domain. For example, it’s done in StyleCLIP:\nFigure 3: Variance in StyleGAN2 space\nCNN Classifier + StyleGAN Let’s take our hairstyle classifier and consider one of its classes. Say, “curly bob with fringe”. The goal is to check whether the classifier is triggered by the right high-level features presented in images.\nFigure 4: Examples from training dataset, ‘curly bob with fringe’\nWhat we want to do is to make our StyleGAN generate pictures that will maximize the probability of the “curly bob with fringe” class predicted by our hairstyle model. And hopefully, we’re going to see images similar to the ground truth ones. By tuning the direction in latent space, we’re optimizing two losses:\nClassifier loss, which could be cross-entropy between what the hairstyle classifier predicts and the label of the desired class;\nIdentity loss, to preserve the person’s identity while changing only their hairstyle. Sort of like a regularization. For that, we can use, for example, a pre-trained InsightFace.\nResults After running tuning for multiple classes, we can now check how well we managed to capture those style directions. For that, we’ll generate a sequence of images adding the learned direction vector to the latent vector with some weight.\nCombining these sequences of images into GIFs, we got something like this for the “curly bob with fringe” class:\nFigure 5: Interpolation in W+ space for ‘curly bob with fringe’ hairstyle\nRemember, we got these results simply by maximizing our classifier’s probabilities for a certain class. This shows quite visually what kind of high-level features trigger the classifier to predict a particular class.\nLet’s see the same kind of visualizations for one more class, long straight hair with fringe:\nFigure 6: Interpolation in W+ space for ’long straight with fringe’ hairstyle\nThese are both classes that our hairstyle model seems to have learned correctly. With face features not changing much during the interpolation in the W+ space, we see hairstyles in our examples change exactly how they are supposed to.\nBut of course, sometimes models overfit or learn to detect something else but the real target features. To illustrate one of those cases, let’s look at interpolation examples for a class of “long African braids”.\nFigure 7: Interpolation in W+ space for ’long African braids’ hairstyle\nHere, we see that maximizing the hairstyle model’s confidence for this hairstyle class also causes changes in skin color. This may suggest, for example, that the dataset is unbalanced for this particular class. Racial disbalance in the dataset can easily cause such behavior and should be dealt with by collecting more images with a more diverse representation.\n",
-  "wordCount" : "651",
-  "inLanguage": "en",
-  "datePublished": "2023-11-12T00:00:00Z",
-  "dateModified": "2023-11-12T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://einstalek.github.io/posts/hairstyle-classifier/hairstyle-classifier/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Underground Notes",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://einstalek.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -145,7 +76,7 @@ First, what are we going to do?"/>
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://einstalek.github.io/" accesskey="h" title="Underground Notes (Alt + H)">Underground Notes</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Underground Notes (Alt + H)">Underground Notes</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -171,17 +102,12 @@ First, what are we going to do?"/>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://einstalek.github.io/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://einstalek.github.io/cv/" title="CV">
+                <a href="http://localhost:1313/cv/" title="CV">
                     <span>CV</span>
                 </a>
             </li>
             <li>
-                <a href="https://einstalek.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -300,16 +226,16 @@ By tuning the direction in latent space, we&rsquo;re optimizing two losses:</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://einstalek.github.io/tags/classifier/">Classifier</a></li>
-      <li><a href="https://einstalek.github.io/tags/gan/">Gan</a></li>
-      <li><a href="https://einstalek.github.io/tags/latent/">Latent</a></li>
+      <li><a href="http://localhost:1313/tags/classifier/">Classifier</a></li>
+      <li><a href="http://localhost:1313/tags/gan/">Gan</a></li>
+      <li><a href="http://localhost:1313/tags/latent/">Latent</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="https://einstalek.github.io/">Underground Notes</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Underground Notes</a></span> · 
 
     <span>
         Powered by
