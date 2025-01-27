@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Text-Guided 3D Face Synthesis: Paper Break-Down | Underground Notes</title>
 <meta name="keywords" content="paper, sds, latent, diffusion, controlnet, 3d, geometry, texture">
 <meta name="description" content="In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.
 Figure 1: Image from the paper: faceg2e pipeline
 Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation.">
 <meta name="author" content="">
-<link rel="canonical" href="https://einstalek.github.io/posts/sds-faceg2e/">
+<link rel="canonical" href="http://localhost:1313/posts/sds-faceg2e/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b61fcfd045e796a8b2d82921640c6460592faab5e5c2c76d0ba1c0018405cbfa.css" integrity="sha256-th/P0EXnlqiy2CkhZAxkYFkvqrXlwsdtC6HAAYQFy/o=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://einstalek.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://einstalek.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://einstalek.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://einstalek.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://einstalek.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://einstalek.github.io/posts/sds-faceg2e/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/sds-faceg2e/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,73 +58,6 @@ Geometry phase First thing to notice is that the pipeline is split into two part
 
     </style>
 </noscript>
-  
-
-<meta property="og:title" content="Text-Guided 3D Face Synthesis: Paper Break-Down" />
-<meta property="og:description" content="In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.
-Figure 1: Image from the paper: faceg2e pipeline
-Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://einstalek.github.io/posts/sds-faceg2e/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-01-18T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Text-Guided 3D Face Synthesis: Paper Break-Down"/>
-<meta name="twitter:description" content="In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.
-Figure 1: Image from the paper: faceg2e pipeline
-Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation."/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://einstalek.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Text-Guided 3D Face Synthesis: Paper Break-Down",
-      "item": "https://einstalek.github.io/posts/sds-faceg2e/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Text-Guided 3D Face Synthesis: Paper Break-Down",
-  "name": "Text-Guided 3D Face Synthesis: Paper Break-Down",
-  "description": "In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.\nFigure 1: Image from the paper: faceg2e pipeline\nGeometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation.",
-  "keywords": [
-    "paper", "sds", "latent", "diffusion", "controlnet", "3d", "geometry", "texture"
-  ],
-  "articleBody": "In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.\nFigure 1: Image from the paper: faceg2e pipeline\nGeometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation. Geometry is decoupled from texture in order not to produce textures with geometry details baked in them.\nThe first part is pretty much the same as I described in my previous post. 3DMM parameters are iteratively updated with a grey-scale render (all vertices assigned the same color) being fed into denoising unet. One thing different is scheduling timestamp to linearly decrease during the training.\nWithout proposed view-dependent prompts, I get something like this during the geometry phase:\nFigure 2: From left to right: Scarlett Johansson, Barack Obama, Elon Musk, Leelee Sobieski\nTexture phase During the texture phase, we fix the geometry and tune the texture in the latent space of VAE decoder. In order not to produce cleaner textures, two types of supervision are proposed.\nDepth supervision: use depth-controlnet, by passing to it depth-render of the mesh, to keep awareness of the geometry itself, separated from the texture. This is intended to get rid of geometric details baked into texture, and to “uphold geometry-texture alignment”.\nTexture-prior: train a custom SD model on textures. This custom SD would help to get rid of light baked into textures, making use of learnt texture distribution.\nFirst, I’m just gonna add the first type of supervision, by using a depth-controlnet. Instead of randomly initializing texture latents, I’ll use latents of some fixed texture for each training. Let’s see the results I get:\nFigure 3: From left to right: Scarlett Johansson, Barack Obama, Elon Musk, Leelee Sobieski\nNow, I’m gonna add something similar to the proposed texture-prior, but without having to train my own SD model. Instead, I will use a controlnet model trained on a pair of textures and canny edges in them. Passing a fixed control input to this controlnet, alongside with a prompt like “face texture,” I’ll pass its output to the denoising UNet and get a second SDS gradient tensor (additional to the one obtained with depth-controlnet).\nFigure 4: From left to right: Scarlett Johansson, Barack Obama, Elon Musk, Leelee Sobieski\nNotice how with the second type of supervision added, resulting textures have more even lighting.\n",
-  "wordCount" : "426",
-  "inLanguage": "en",
-  "datePublished": "2024-01-18T00:00:00Z",
-  "dateModified": "2024-01-18T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://einstalek.github.io/posts/sds-faceg2e/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Underground Notes",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://einstalek.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -142,7 +75,7 @@ Geometry phase First thing to notice is that the pipeline is split into two part
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://einstalek.github.io/" accesskey="h" title="Underground Notes (Alt + H)">Underground Notes</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Underground Notes (Alt + H)">Underground Notes</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -168,12 +101,12 @@ Geometry phase First thing to notice is that the pipeline is split into two part
         </div>
         <ul id="menu">
             <li>
-                <a href="https://einstalek.github.io/cv/" title="CV">
+                <a href="http://localhost:1313/cv/" title="CV">
                     <span>CV</span>
                 </a>
             </li>
             <li>
-                <a href="https://einstalek.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -268,21 +201,21 @@ Geometry phase First thing to notice is that the pipeline is split into two part
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://einstalek.github.io/tags/paper/">Paper</a></li>
-      <li><a href="https://einstalek.github.io/tags/sds/">Sds</a></li>
-      <li><a href="https://einstalek.github.io/tags/latent/">Latent</a></li>
-      <li><a href="https://einstalek.github.io/tags/diffusion/">Diffusion</a></li>
-      <li><a href="https://einstalek.github.io/tags/controlnet/">Controlnet</a></li>
-      <li><a href="https://einstalek.github.io/tags/3d/">3D</a></li>
-      <li><a href="https://einstalek.github.io/tags/geometry/">Geometry</a></li>
-      <li><a href="https://einstalek.github.io/tags/texture/">Texture</a></li>
+      <li><a href="http://localhost:1313/tags/paper/">Paper</a></li>
+      <li><a href="http://localhost:1313/tags/sds/">Sds</a></li>
+      <li><a href="http://localhost:1313/tags/latent/">Latent</a></li>
+      <li><a href="http://localhost:1313/tags/diffusion/">Diffusion</a></li>
+      <li><a href="http://localhost:1313/tags/controlnet/">Controlnet</a></li>
+      <li><a href="http://localhost:1313/tags/3d/">3D</a></li>
+      <li><a href="http://localhost:1313/tags/geometry/">Geometry</a></li>
+      <li><a href="http://localhost:1313/tags/texture/">Texture</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://einstalek.github.io/">Underground Notes</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Underground Notes</a></span> · 
 
     <span>
         Powered by

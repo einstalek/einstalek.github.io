@@ -77,9 +77,9 @@ Below is a comparison of the reconstruction results, with entries as follows:
 
 {{< figure src="/posts/shape-former/comparison.png" caption="Figure 6: Morphable model vs Transformer vs HRN prediction" class=custom-caption >}}
 
-And here’s another visualization, where I tried to show the L2 loss between face shape predictions and HRN, averaged across ~60 photos and rendered over an average head shape. Red regions represent higher reconstruction errors. Some of the red areas for morphable model are expected, like neck region for example. But the inner face regions are the ones that are more important – and there I see the real improvement.
+And here’s another visualization, showing the L2 loss between face shape predictions and the HRN mesh, averaged across ~60 photos and rendered over an average head shape. Red regions represent higher reconstruction errors. Some of the red areas for morphable model are expected, like neck region for example. But the inner face and the overall face contour are the parts that are more important – and there I see the real improvement.
 
-{{< figure src="/posts/shape-former/loss.png" caption="Figure 7: L2 loss for transformer output (left) and morphable model output (right)" class=custom-caption >}}
+{{< figure src="/posts/shape-former/loss.png" caption="Figure 7: Average L2 loss for transformer output (left), Average L2 loss for morphable model output (center), and their ratio (right)" class=custom-caption >}}
 
 
 ### Conclusion
