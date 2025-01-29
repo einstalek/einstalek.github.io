@@ -2,7 +2,7 @@
 <html lang="en" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.133.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.142.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
@@ -168,7 +168,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome Disney paper. Using paper’s transformer decoder architecture, with cross-covariance attention (XCiT) conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using HRN which scores among the highest on 3D Face Reconstruction benchmark....</p>
+    <p>Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome Disney paper. Using paper’s transformer decoder architecture, with cross-covariance attention (XCiT) conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using HRN which scores among the highest on 3D Face Reconstruction benchmark.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-26 00:00:00 +0000 UTC'>January 26, 2025</span>&nbsp;·&nbsp;5 min</footer>
   <a class="entry-link" aria-label="post link to Face Embedding Conditioned Transformer For 3D Face Reconstruction" href="http://localhost:1313/posts/shape-former/shape-former/"></a>
@@ -182,7 +183,8 @@
   <div class="entry-content">
     <p>I recently encountered a problem working with 3D avatars: having a custom-generated head mesh, I needed to merge it seamlessly with the avatar’s body. And since you can’t go around asking 3D artists to do their magic all the time, here I suggest a simple solution for this type of problem.
 Figure 1: Separate head and body meshes
-To tackle this, one can make use of Blender’s proportional editing, and as it turns out, it works pretty well....</p>
+To tackle this, one can make use of Blender’s proportional editing, and as it turns out, it works pretty well.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-08-10 00:00:00 +0000 UTC'>August 10, 2024</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Eliminating Seams: Joining Separate Meshes with Blender" href="http://localhost:1313/posts/neck-seam/"></a>
@@ -196,7 +198,8 @@ To tackle this, one can make use of Blender’s proportional editing, and as it 
   <div class="entry-content">
     <p>In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.
 Figure 1: Image from the paper: faceg2e pipeline
-Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation....</p>
+Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation. Geometry is decoupled from texture in order not to produce textures with geometry details baked in them.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-01-18 00:00:00 +0000 UTC'>January 18, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to Text-Guided 3D Face Synthesis: Paper Break-Down" href="http://localhost:1313/posts/sds-faceg2e/"></a>
@@ -209,7 +212,8 @@ Geometry phase First thing to notice is that the pipeline is split into two part
   </header>
   <div class="entry-content">
     <p>Morphable models One of the easiest and common approaches to face shape reconstruction are 3D morphable models (3DMM). For example, the FLAME head model is used left and right in research papers. Among recent works making use of 3DMM that I’ve seen, HRN demonstrates quite impressive results.
-I’m not going to discuss in depth 3DMMs, how they work or how they’re built. Let’s just mention that with this approach, a 3D shape is reconstructed as a linear combination of basis components....</p>
+I’m not going to discuss in depth 3DMMs, how they work or how they’re built. Let’s just mention that with this approach, a 3D shape is reconstructed as a linear combination of basis components.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-01-04 00:00:00 +0000 UTC'>January 4, 2024</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to Using Stable Diffusion To Tune 3D Morphable Model" href="http://localhost:1313/posts/sds-head-shape/"></a>
@@ -224,7 +228,7 @@ I’m not going to discuss in depth 3DMMs, how they work or how they’re built.
     <p>In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.
 StyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this repo, alongside generated examples across various domains.
 Figure 1: Examples generated with StyleGAN2
-First, what are we going to do?...</p>
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-11-12 00:00:00 +0000 UTC'>November 12, 2023</span>&nbsp;·&nbsp;4 min</footer>
   <a class="entry-link" aria-label="post link to How To Visually Evaluate Image Classifier Using StyleGAN2" href="http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/"></a>
@@ -237,7 +241,8 @@ First, what are we going to do?...</p>
   </header>
   <div class="entry-content">
     <p>Aligning mesh textures with different topologies could be a fantastic feature for any 3D project. This would unlock numerous possibilities, such as texture transfer or novel texture generation. That’s precisely what the AUV-Net paper by Nvidia addresses. Let’s review the paper to understand its primary concepts, implement it from scratch, and see if we can achieve results similar to those in the paper.
-Figure 1: Texture transfer with AUV-Net, image from the paper...</p>
+Figure 1: Texture transfer with AUV-Net, image from the paper
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-05-18 00:00:00 +0000 UTC'>May 18, 2023</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to AUV-Net: Paper Break-down, Part 1" href="http://localhost:1313/posts/auvnet-2d/auvnet-2d/"></a>

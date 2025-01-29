@@ -4,7 +4,7 @@
     <title>Morphable Model on Underground Notes</title>
     <link>http://localhost:1313/tags/morphable-model/</link>
     <description>Recent content in Morphable Model on Underground Notes</description>
-    <generator>Hugo -- 0.133.0</generator>
+    <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/morphable-model/index.xml" rel="self" type="application/rss+xml" />
@@ -13,15 +13,16 @@
       <link>http://localhost:1313/posts/shape-former/shape-former/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/shape-former/shape-former/</guid>
-      <description>Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome Disney paper. Using paper&amp;rsquo;s transformer decoder architecture, with cross-covariance attention (XCiT) conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using HRN which scores among the highest on 3D Face Reconstruction benchmark.</description>
+      <description>&lt;p&gt;Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome &lt;a href=&#34;https://assets.studios.disneyresearch.com/app/uploads/2022/03/Shape-Transformers.pdf&#34;&gt;Disney paper&lt;/a&gt;. Using paper&amp;rsquo;s transformer decoder architecture, with cross-covariance attention &lt;a href=&#34;https://github.com/facebookresearch/xcit?tab=readme-ov-file&#34;&gt;(XCiT)&lt;/a&gt; conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using &lt;a href=&#34;https://github.com/youngLBW/HRN&#34;&gt;HRN&lt;/a&gt; which scores among the highest on 3D Face Reconstruction &lt;a href=&#34;https://paperswithcode.com/sota/3d-face-reconstruction-on-realy&#34;&gt;benchmark&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using Stable Diffusion To Tune 3D Morphable Model</title>
       <link>http://localhost:1313/posts/sds-head-shape/</link>
       <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/sds-head-shape/</guid>
-      <description>Morphable models One of the easiest and common approaches to face shape reconstruction are 3D morphable models (3DMM). For example, the FLAME head model is used left and right in research papers. Among recent works making use of 3DMM that I&amp;rsquo;ve seen, HRN demonstrates quite impressive results.
-I&amp;rsquo;m not going to discuss in depth 3DMMs, how they work or how they&amp;rsquo;re built. Let&amp;rsquo;s just mention that with this approach, a 3D shape is reconstructed as a linear combination of basis components.</description>
+      <description>&lt;h3 id=&#34;morphable-models&#34;&gt;Morphable models&lt;/h3&gt;
+&lt;p&gt;One of the easiest and common approaches to face shape reconstruction are 3D morphable models (3DMM). For example, the &lt;a href=&#34;https://flame.is.tue.mpg.de/&#34;&gt;FLAME&lt;/a&gt; head model is used left and right in research papers. Among recent works making use of 3DMM that I&amp;rsquo;ve seen, &lt;a href=&#34;https://github.com/youngLBW/HRN&#34;&gt;HRN&lt;/a&gt; demonstrates quite impressive results.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not going to discuss in depth 3DMMs, how they work or how they&amp;rsquo;re built. Let&amp;rsquo;s just mention that with this approach, a 3D shape is reconstructed as a linear combination of basis components.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

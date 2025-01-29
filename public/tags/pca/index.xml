@@ -4,7 +4,7 @@
     <title>Pca on Underground Notes</title>
     <link>http://localhost:1313/tags/pca/</link>
     <description>Recent content in Pca on Underground Notes</description>
-    <generator>Hugo -- 0.133.0</generator>
+    <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/pca/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,11 @@
       <link>http://localhost:1313/posts/auvnet-2d/auvnet-2d/</link>
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/auvnet-2d/auvnet-2d/</guid>
-      <description>Aligning mesh textures with different topologies could be a fantastic feature for any 3D project. This would unlock numerous possibilities, such as texture transfer or novel texture generation. That’s precisely what the AUV-Net paper by Nvidia addresses. Let’s review the paper to understand its primary concepts, implement it from scratch, and see if we can achieve results similar to those in the paper.
-Figure 1: Texture transfer with AUV-Net, image from the paper</description>
+      <description>&lt;p&gt;Aligning mesh textures with different topologies could be a fantastic feature for any 3D project. This would unlock numerous possibilities, such as texture transfer or novel texture generation. That’s precisely what the &lt;a href=&#34;https://research.nvidia.com/labs/toronto-ai/AUV-NET/&#34;&gt;AUV-Net paper&lt;/a&gt; by Nvidia addresses. Let’s review the paper to understand its primary concepts, implement it from scratch, and see if we can achieve results similar to those in the paper.&lt;/p&gt;
+&lt;figure class=&#34;align-center custom-caption&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/auvnet-2d/animals-3d.webp#center&#34;
+         alt=&#34;Figure 1: Texture transfer with AUV-Net, image from the paper&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Figure 1: Texture transfer with AUV-Net, image from the paper&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

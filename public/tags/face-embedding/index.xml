@@ -4,7 +4,7 @@
     <title>Face Embedding on Underground Notes</title>
     <link>http://localhost:1313/tags/face-embedding/</link>
     <description>Recent content in Face Embedding on Underground Notes</description>
-    <generator>Hugo -- 0.133.0</generator>
+    <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/face-embedding/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/shape-former/shape-former/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/shape-former/shape-former/</guid>
-      <description>Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome Disney paper. Using paper&amp;rsquo;s transformer decoder architecture, with cross-covariance attention (XCiT) conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using HRN which scores among the highest on 3D Face Reconstruction benchmark.</description>
+      <description>&lt;p&gt;Here I will describe one of my recent experiments with 3D face reconstruction, based on this awesome &lt;a href=&#34;https://assets.studios.disneyresearch.com/app/uploads/2022/03/Shape-Transformers.pdf&#34;&gt;Disney paper&lt;/a&gt;. Using paper&amp;rsquo;s transformer decoder architecture, with cross-covariance attention &lt;a href=&#34;https://github.com/facebookresearch/xcit?tab=readme-ov-file&#34;&gt;(XCiT)&lt;/a&gt; conditioned and modulated with face embeddings, I was able to improve the quality of reconstructed faces. Since I was lacking a sufficiently large 3D head shape dataset, I decided to generate my own dataset using &lt;a href=&#34;https://github.com/youngLBW/HRN&#34;&gt;HRN&lt;/a&gt; which scores among the highest on 3D Face Reconstruction &lt;a href=&#34;https://paperswithcode.com/sota/3d-face-reconstruction-on-realy&#34;&gt;benchmark&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

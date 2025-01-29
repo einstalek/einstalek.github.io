@@ -8,8 +8,14 @@
 <title>Text-Guided 3D Face Synthesis: Paper Break-Down | Underground Notes</title>
 <meta name="keywords" content="paper, sds, latent, diffusion, controlnet, 3d, geometry, texture">
 <meta name="description" content="In this post, I want to revisit Score Samping Distillation (SDS) for 3D head synthesis. Having recently found this paper, I discovered several ideas on how to properly generate textures with SDS. In my previous post on this topic I was mentioning that it was particularly complicated to generate clean face textures.
-Figure 1: Image from the paper: faceg2e pipeline
-Geometry phase First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation.">
+
+     
+            Figure 1: Image from the paper: faceg2e pipeline
+        
+
+
+Geometry phase
+First thing to notice is that the pipeline is split into two parts: geometry generation and then texture generation. Geometry is decoupled from texture in order not to produce textures with geometry details baked in them.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/sds-faceg2e/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b61fcfd045e796a8b2d82921640c6460592faab5e5c2c76d0ba1c0018405cbfa.css" integrity="sha256-th/P0EXnlqiy2CkhZAxkYFkvqrXlwsdtC6HAAYQFy/o=" rel="preload stylesheet" as="style">

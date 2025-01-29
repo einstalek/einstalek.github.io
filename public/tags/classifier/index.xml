@@ -4,7 +4,7 @@
     <title>Classifier on Underground Notes</title>
     <link>http://localhost:1313/tags/classifier/</link>
     <description>Recent content in Classifier on Underground Notes</description>
-    <generator>Hugo -- 0.133.0</generator>
+    <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Nov 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/classifier/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,12 @@
       <link>http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/</link>
       <pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hairstyle-classifier/hairstyle-classifier/</guid>
-      <description>In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in Ready Player Me.
-StyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this repo, alongside generated examples across various domains.
-Figure 1: Examples generated with StyleGAN2
-First, what are we going to do?</description>
+      <description>&lt;p&gt;In this article, we’ll be evaluating an image classifier by exploring StyleGAN2 latent space. We’ll look at the performance of a hairstyle classifier that we use in &lt;a href=&#34;https://readyplayer.me/&#34;&gt;Ready Player Me&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;StyleGAN2 is a generative model architecture demonstrating state-of-the-art image generation. Code of the model and pre-trained weights can be found, for example, in this &lt;a href=&#34;https://github.com/rosinality/stylegan2-pytorch&#34;&gt;repo&lt;/a&gt;, alongside generated examples across various domains.&lt;/p&gt;
+&lt;figure class=&#34;align-center custom-caption&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/hairstyle-classifier/faces.png#center&#34;
+         alt=&#34;Figure 1: Examples generated with StyleGAN2&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Figure 1: Examples generated with StyleGAN2&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
